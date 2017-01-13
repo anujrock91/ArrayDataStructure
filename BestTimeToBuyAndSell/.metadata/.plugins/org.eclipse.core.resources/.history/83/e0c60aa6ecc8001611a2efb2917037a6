@@ -1,0 +1,12 @@
+package Snippet;
+
+public class BestTimeBuySell {
+	
+	public int maxProfit(int[] prices){
+		int left = 0;
+		int right = 0;
+		while(left< prices.length && right<prices.length){
+			
+		}
+	}
+}

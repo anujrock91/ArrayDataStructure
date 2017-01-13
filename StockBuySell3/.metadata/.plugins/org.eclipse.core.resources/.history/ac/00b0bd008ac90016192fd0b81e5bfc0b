@@ -1,0 +1,53 @@
+package Snippet;
+
+public class StockBuySell3 {
+	
+	public int maxProfit(int prices[]){
+		int left = 0;
+		int right = 0;
+		int maxProfit = 0;
+		int [] leftArr = new int[prices.length];
+		int [] rightArr = new int[prices.length];
+		while(left < prices.length && right < prices.length){
+			int currentDiff = prices[right] - prices[left];
+			if(currentDiff >=0){
+				maxProfit = Math.max(currentDiff, maxProfit);
+			}
+			else{
+				left = right;
+			}
+			leftArr[right] = maxProfit;
+			System.out.print(leftArr[right] + " | ");
+			++right;
+		}
+		System.out.println();
+		
+		left = (prices.length -1);
+		right = (prices.length -1);
+		maxProfit = 0;
+		while(left>=0 && right >=0 ){
+			int currentProfit = (prices[right] - prices[left]);
+			if(currentProfit >= 0){
+				maxProfit = Math.max(maxProfit, currentProfit);
+			}
+			else{
+				right = left;
+			}
+			rightArr[left] = maxProfit;
+			System.out.print(rightArr[left] + " | ");
+			--left;
+		}
+		
+		for(int i=0;i<prices.length;i++){
+			
+		}
+		System.out.println();
+		
+		
+		return maxProfit;
+	}
+	
+	public static void main(String args[]){
+		System.out.println(new StockBuySell3().maxProfit(new int[]{1, 4, 5, 7, 6, 3, 2, 9}));
+	}
+}

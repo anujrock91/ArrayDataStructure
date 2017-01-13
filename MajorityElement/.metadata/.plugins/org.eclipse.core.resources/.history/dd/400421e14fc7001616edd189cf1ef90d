@@ -1,0 +1,8 @@
+package Snippet;
+
+public class MajorityElement {
+	
+	public Integer getMajorityElement(int arr[]){
+		
+	}
+}

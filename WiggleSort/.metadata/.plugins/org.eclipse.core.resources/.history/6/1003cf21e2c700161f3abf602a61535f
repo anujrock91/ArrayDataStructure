@@ -1,0 +1,28 @@
+package Snippet;
+
+public class WiggleSort {
+	
+	public void wiggleSort(int [] nums){
+		
+	}
+	
+	private void swapMax(int [] nums, int index, int numberOfElements){
+		int current = nums[index];
+		int prev = nums[index-1];
+		if(numberOfElements == 3){
+			int next = nums[index+1];
+			int max = Math.max(current, prev);
+			max = Math.max(max, next);
+			if(max!=current && max==next){nums[index+1] = current; nums[index] = next;}
+			else if(max!=current && max==prev){nums[index] = prev; nums[index-1] = current;}
+		}
+		else{
+			int next = nums[index+1];
+			int max = Math.max(current, prev);
+			max = Math.max(max, next);
+			if(max!=current && max==next){nums[index+1] = current; nums[index] = next;}
+			else if(max!=current && max==prev){nums[index] = prev; nums[index-1] = current;}
+		}
+	}
+	
+}

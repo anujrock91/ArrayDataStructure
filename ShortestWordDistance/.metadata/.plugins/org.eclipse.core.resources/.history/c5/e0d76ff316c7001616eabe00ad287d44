@@ -1,0 +1,18 @@
+package Snippet;
+
+public class ShortestWordDistance {
+	
+	public int getDistance(String[] words, String word1, String word2){
+		int left = 0;
+		int right = words.length-1;
+		int min = 0;
+		while(left < words.length && right >= 0){
+			while(left < words.length && !words[left].equals(word1)) { ++left; }
+			while(right >= 0 && !words[right].equals(word2)) { --right; }
+			if(left < words.length && right >=0){
+				int diff = 
+			}
+		}
+	}
+	
+}

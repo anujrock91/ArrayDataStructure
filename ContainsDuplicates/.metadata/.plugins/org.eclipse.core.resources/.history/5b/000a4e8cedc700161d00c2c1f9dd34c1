@@ -1,0 +1,11 @@
+package Snippet;
+
+public class ContainsDuplicates {
+	
+	public boolean isDuplicates(int [] nums){
+		HashMap<Integer, Integer> elementIndex = new HashMap<Integer, Integer>();
+		for(int i=0;i<nums.length;i++){
+			
+		}
+	}
+}

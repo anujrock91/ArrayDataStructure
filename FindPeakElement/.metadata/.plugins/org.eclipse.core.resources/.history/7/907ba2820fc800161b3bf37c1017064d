@@ -1,0 +1,8 @@
+package Snippet;
+
+public class PeakElement {
+	
+	public int getPeakElement(int [] nums){
+		
+	}
+}

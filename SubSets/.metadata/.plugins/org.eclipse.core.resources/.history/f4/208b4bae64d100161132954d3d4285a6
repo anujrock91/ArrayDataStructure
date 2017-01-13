@@ -1,0 +1,21 @@
+package Snippet;
+import java.util.ArrayList;
+
+public class Subsets {
+
+	
+	public void getSubsets(int []nums, int j, ArrayList<Integer> temp, ArrayList<ArrayList<Integer>> result){
+		if(j == nums.length-1){
+			temp.add(nums[j]);
+			ArrayList<Integer> newList= new ArrayList<>(temp);
+			result.add(newList);
+			temp.remove(temp.size()-1);
+		}
+		
+		for(int i=j;i<nums.length;i++){
+			temp.add(nums[i]);
+			getSubsets(nums, i+1, temp, result);
+			temp.remove(temp.size()-1);
+		}
+	}
+}

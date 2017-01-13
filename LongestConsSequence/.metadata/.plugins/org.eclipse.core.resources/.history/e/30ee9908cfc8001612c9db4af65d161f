@@ -1,0 +1,8 @@
+package Snippet;
+
+public class LongestConsSequece {
+	
+	public static int longestConsecutive(int[] num){
+		HashSet<>
+	}
+}

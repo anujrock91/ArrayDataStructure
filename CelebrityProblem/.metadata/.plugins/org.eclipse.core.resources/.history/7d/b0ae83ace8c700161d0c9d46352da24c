@@ -1,0 +1,11 @@
+package Snippet;
+
+public class CelebrityProblem {
+	
+	public int findCelebrity(int n){
+		int left = 0;
+		int right = n-1;
+		
+	}
+	public void knows(int a, int b){}
+}

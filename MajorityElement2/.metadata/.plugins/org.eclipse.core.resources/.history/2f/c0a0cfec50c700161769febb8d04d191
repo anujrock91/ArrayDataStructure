@@ -1,0 +1,15 @@
+package Snippet;
+
+public class MajorityElement {
+
+	public List<Integer> getMajorityElements(int nums[]){
+		
+	}
+	 
+	public static void main(String[] args) {
+		
+	}
+	
+	
+
+}

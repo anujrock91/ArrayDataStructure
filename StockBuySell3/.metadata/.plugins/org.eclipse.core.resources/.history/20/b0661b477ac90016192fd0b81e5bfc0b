@@ -1,0 +1,25 @@
+package Snippet;
+
+public class StockBuySell3 {
+	
+	public int maxProfit(int prices[]){
+		int left = 0;
+		int right = 0;
+		int maxProfit = 0;
+		int [] leftArr = new int[prices.length];
+		while(left < prices.length && right < prices.length){
+			int currentDiff = prices[left] - prices[right];
+			if(currentDiff >=0){
+				maxProfit = Math.max(currentDiff, maxProfit);
+			}
+			else{
+				left = right;
+			}
+			leftArr[right] = maxProfit;
+			++right;
+		}
+		return maxProfit;
+	}
+	
+	
+}

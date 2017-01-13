@@ -1,0 +1,13 @@
+package Snippet;
+
+public class MinimumSubArray {
+	
+	public int minSubArrayLen(int s, int[] nums) {
+		int left = 0;
+		int right = 1;
+		
+		while(right < nums.length){
+			
+		}
+    }
+}

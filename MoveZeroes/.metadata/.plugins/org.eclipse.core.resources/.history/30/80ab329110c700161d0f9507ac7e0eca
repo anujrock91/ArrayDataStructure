@@ -1,0 +1,8 @@
+package Snippet;
+
+public class MoveZeroes {
+	
+	public int [] getNums(int arr[]){
+		return arr;
+	}
+}

@@ -1,0 +1,8 @@
+package Snippet;
+
+public class MissingNum {
+	
+	public int getMissingNum(int arr[]){
+		
+	}
+}

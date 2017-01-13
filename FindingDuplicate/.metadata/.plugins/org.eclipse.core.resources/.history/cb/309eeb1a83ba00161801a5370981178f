@@ -1,0 +1,22 @@
+package Snippet;
+
+public class Duplicate {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public int getDuplicate(int arr[]){
+		int left = 1;
+		int right = arr.length-1;
+		while(left<right){
+			int avg = ((left+right)/2);
+			for(int x: arr){
+				if(c < avg){
+					++c;
+				}
+			}
+		}
+	}
+}

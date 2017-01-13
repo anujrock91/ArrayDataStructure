@@ -1,0 +1,1 @@
+INDEX VERSION 1.127+B:\FullTimeJob\Array\Leetcode\MaximalAreaRectangle\.metadata\.plugins\org.eclipse.jdt.core

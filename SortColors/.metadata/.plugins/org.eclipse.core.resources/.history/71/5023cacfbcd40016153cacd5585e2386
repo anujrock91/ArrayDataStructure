@@ -1,0 +1,12 @@
+package Snippet;
+
+public class SortColors {
+
+	
+	public int partition(int nums[], int left, int right, int pivot){
+		while(left<=right){
+			while(nums[left] == pivot){ ++left; }
+			
+		}
+	}
+}

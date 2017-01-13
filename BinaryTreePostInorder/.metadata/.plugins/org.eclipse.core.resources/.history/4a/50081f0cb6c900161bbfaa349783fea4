@@ -1,0 +1,26 @@
+package Snippet;
+
+public class ConsBinaryTree {
+	
+	public TreeNode buildTree(int[] inorder, int[] postorder) {
+        
+    }
+	
+	private Integer buildTree(int[] inorder, int[] postorder, int pointer){
+		if(inorder.length == 0 || postorder.length == 0){ return null; }
+		else{
+			TreeNode newNode = new TreeNode(postorder[pointer]);
+			int inorderBreak;
+			for(inorderBreak = 0; inorderBreak<inorder.length;inorderBreak++){
+				if(inorder[inorderBreak] == postorder[pointer]){ break; }
+			}
+			int leftArr[] = new int[inorderBreak];
+			int rightArr[] = new int[inorder.length-inorderBreak-1];
+			for(int i=0;i<inorderBreak;i++){ leftArr[i] = inorder[i]; }
+			int rightCount = 0;
+			for(int i=inorderBreak+1;i<inorder.length;i++){ rightArr[rightCount] = inorder[i]; ++rightCount; }
+			if(rightArr.length != 0){ pointer = buildTree(rightArr, postorder, pointer-1);}
+			if(leftArr.length != 0){}
+		}
+	}
+}

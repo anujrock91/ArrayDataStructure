@@ -1,0 +1,56 @@
+package Snippet;
+
+public class MedianSortedArray {
+	
+	public double medianSortedArray(int [] arr1, int arr2[]){
+		return median(arr1, arr2, 0, arr1.length-1, 0, arr2.length-1);
+	}
+	
+	public double median(int []arr1, int arr2[], int left1, int right1, int left2, int right2){
+		if(left1 <0 || right1 <0){ left1 = Math.max(left1, right1); right1 = Math.max(left1, right1);}
+		if(left1 >arr1.length || right1 >arr1.length){ left1 = Math.min(left1, right1); right1 = Math.min(left1, right1);}
+		if(left2 <0 || right2 <0){ left2 = Math.max(left2, right2); right2 = Math.max(left2, right2);}
+		if(left2 >arr2.length || right2 >arr2.length){ left2 = Math.min(left2, right2); right2 = Math.min(left2, right2);}
+		int median1 = arr1[(left1+right1)/2];
+		int median2 = arr2[(left2+right2)/2];
+		if(left1 == right1 && left2 == right2){
+			if(median2 > median1 && left2 != 0){
+				if(arr2[left2-1] > median1){ return arr2[left2-1]; }
+				else{ }
+			}
+			return (median1+median2)/2.;
+		}
+		else{
+			if(median1 > median2){
+				if(left2 == right2){
+					return median(arr1, arr2, left1, ((left1+right1)/2)-1, left2, right2);
+				}
+				else if(left1 == right1 ){
+					return median(arr1, arr2, left1, right1, ((left2+right2)/2)+1, right2);
+				}
+				else{
+					return median(arr1, arr2, left1, ((left1+right1)/2)-1, ((left2+right2)/2)+1, right2);
+				}
+			}
+			else if(median1 < median2){
+				if(left2 == right2){
+					return median(arr1, arr2, ((left1+right1)/2)+1, right1, left2, right2);
+				}
+				else if(left1 == right1){
+					return median(arr1, arr2, left1, right1, left2, ((left2+right2)/2)-1);
+				}
+				else{
+					return median(arr1, arr2, ((left1+right1)/2)+1, right1, left2,((left2+right2)/2)-1);
+				}
+			}
+			else{
+				return median1;
+			}
+		}
+	}
+	
+	
+	public static void main(String args[]){
+		System.out.println(new MedianSortedArray().medianSortedArray(new int[]{1,3}, new int[]{2}));
+	}
+}

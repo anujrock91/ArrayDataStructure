@@ -1,0 +1,8 @@
+package Snippet;
+
+public class ThirdMax {
+	
+	public int getThirdMax(int [] arr){
+		int first,second, third = Integer.MIN_VALUE;
+	}
+}	

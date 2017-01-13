@@ -1,0 +1,10 @@
+package Snippet;
+import java.util.*;
+
+public class MergeSorted {
+	
+	public int[] mergeSorted(int num1s[] , int nums2[]){
+		
+	}
+	
+}

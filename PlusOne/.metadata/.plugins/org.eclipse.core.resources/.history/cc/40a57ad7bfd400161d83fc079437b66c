@@ -1,0 +1,11 @@
+package Snippet;
+
+public class PlusOne {
+	
+	public int[] plusOne(int nums[]){
+		nums[nums.length-1] = (nums[nums.length-1]+1);
+		int quo = 0;
+		int rem = 0;
+		
+	}
+}

@@ -1,0 +1,50 @@
+package Snippet;
+import java.util.*;
+
+public class WordLadder2 {
+	
+	public List<List<String>> findLadders(String start, String end, Set<String> wordDict){
+		List<List<String>> result = new ArrayList<>();
+		ArrayList<String> dict = new ArrayList<String>();
+		for(String s: wordDict){
+			dict.add(s);
+		}
+		ArrayList<String> temp = new ArrayList<String>();
+		wordLadders(start, end, dict, result, temp);
+		return result;
+	}
+	
+	private void wordLadders(String start, String end, ArrayList<String> wordDict, List<List<String>> result, ArrayList<String> temp){
+		temp.add(start);
+		if(isOneDiff(start,end)){
+			temp.add(end);
+			ArrayList<String> tempResult = new ArrayList<>(temp);
+			result.add(tempResult);
+			temp.remove(temp.size()-1);
+		}
+		else{
+			for(int i=0;i<wordDict.size();i++){
+				String tempWord = wordDict.get(i);
+				if(isOneDiff(start, tempWord)){
+					String underConsideration = wordDict.remove(i);
+					wordLadders(underConsideration, end, wordDict, result, temp);
+					wordDict.add(i, underConsideration);
+				}
+			}
+		}
+		temp.remove(temp.size()-1);
+	}
+	
+	public boolean isOneDiff(String s1, String s2){
+		int count = 0;
+		for(int i=0;i<s1.length();i++){
+			if(s1.charAt(i) == s2.charAt(i)){
+				++count;
+			}
+		}
+		return count==1?true:false; 
+	}
+	
+	
+	
+}

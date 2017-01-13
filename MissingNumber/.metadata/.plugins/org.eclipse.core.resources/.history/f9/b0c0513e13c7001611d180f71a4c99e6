@@ -1,0 +1,10 @@
+package Snippet;
+
+public class MissingNum {
+	
+	public int getMissingNum(int arr[]){
+		int max = Integer.MIN_VALUE;
+		int min = Integer.MAX_VALUE;
+		
+	}
+}

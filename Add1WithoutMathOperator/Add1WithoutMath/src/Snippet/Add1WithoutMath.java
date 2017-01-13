@@ -1,0 +1,18 @@
+package Snippet;
+
+public class Add1WithoutMath {
+	
+	public int add1(int num){
+		int one = 1;
+		while( (num&one) != 0){
+			num = num^one;
+			one <<=1;
+		}
+		return num^one;
+	}
+	
+	public static void main(String [] nums){
+		System.out.println(new Add1WithoutMath().add1(13));
+	}
+	
+}

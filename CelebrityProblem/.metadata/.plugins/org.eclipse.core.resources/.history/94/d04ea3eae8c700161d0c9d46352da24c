@@ -1,0 +1,21 @@
+package Snippet;
+
+public class CelebrityProblem {
+	
+	public int findCelebrity(int n){
+		int left = 0;
+		int right = n-1;
+		while(left<right){
+			if(knows(left, right)){
+				++left;
+			}
+			else{
+				--right;
+			}
+		}
+		
+		//Verify the correct Candidate
+		
+	}
+	public boolean knows(int a, int b){ return true; }
+}

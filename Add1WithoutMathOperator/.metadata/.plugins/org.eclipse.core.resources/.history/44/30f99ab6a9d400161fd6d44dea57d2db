@@ -1,0 +1,8 @@
+package Snippet;
+
+public class Add1WithoutMath {
+	
+	public int add1(int num){
+		int one = 1;
+	}
+}

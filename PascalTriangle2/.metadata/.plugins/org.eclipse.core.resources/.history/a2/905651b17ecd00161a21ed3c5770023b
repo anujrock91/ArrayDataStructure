@@ -1,0 +1,8 @@
+package Snippet;
+
+public class PascalTriangle2 {
+	
+	public List<Integer> getKthRow(int rowNum,int level){
+		if()
+	}
+}

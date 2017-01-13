@@ -1,0 +1,14 @@
+package Snippet;
+
+public class PeakElement {
+	
+	public int getPeakElement(int [] nums){
+		for(int i=1;i<nums.length-1;i++){
+			int current= nums[i];
+			int prev = nums[i-1];
+			int next = nums[i+1];
+			if(current > prev && current > next){ return i; }
+		}
+		
+	}
+}

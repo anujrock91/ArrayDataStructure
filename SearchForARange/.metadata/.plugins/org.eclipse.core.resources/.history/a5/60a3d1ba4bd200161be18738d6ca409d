@@ -1,0 +1,42 @@
+package Snippet;
+
+public class SearchRange {
+	
+	public int[] searchRange(int nums[], int target ){
+		
+		int left = 0;
+		int right = nums.length-1;
+		int prevLeft = Integer.MIN_VALUE;
+		while(left<=right){
+			int middle = ((left+right)/2);
+			int curr = nums[middle];
+			if(curr < target){ left = middle+1; }
+			else if(curr > target){ right = middle+1; } 
+			else{
+				left = middle;
+				if(prevLeft == middle){
+					break;
+				}
+				prevLeft = middle;
+			}
+		}
+		
+		int prevRight = Integer.MIN_VALUE;
+		while(left<=right){
+			int middle = ((left+right)/2);
+			int curr = nums[middle];
+			if(curr < target){ left = middle+1; }
+			else if(curr > target){ right = middle+1; } 
+			else{
+				right = middle;
+				if(prevRight == middle){
+					break;
+				}
+				prevRight = middle;
+			}
+		}
+		
+		
+	}
+	
+}

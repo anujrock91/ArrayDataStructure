@@ -1,0 +1,14 @@
+package Snippet;
+import java.util.*;
+
+public class LongestConsSequece {
+	
+	public static int longestConsecutive(int[] num){
+		HashSet<Integer> set = new HashSet<Integer>();
+		for(int i: num){
+			set.add(i);
+		}
+		
+		
+	}
+}

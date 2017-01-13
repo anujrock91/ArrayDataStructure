@@ -1,0 +1,10 @@
+package Snippet;
+
+public class MedianSortedArray {
+	
+
+	
+	public static void main(String args[]){
+		System.out.println(new MedianSortedArray().medianSortedArray(new int[]{1,2}, new int[]{3}));
+	}
+}

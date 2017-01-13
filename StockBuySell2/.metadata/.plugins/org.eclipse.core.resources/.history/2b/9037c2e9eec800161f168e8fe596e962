@@ -1,0 +1,14 @@
+package Snippet;
+
+public class BuySellStock2 {
+	
+	public int maxProfit(int [] prices){
+		int left = 0;
+		int right = 0;
+		int totalProfit = 0;
+		while(left<proces.length && right<proces.length){
+			
+		}
+	}
+	
+}

@@ -1,0 +1,11 @@
+package Snippet;
+
+public class FourSum {
+	
+	public List<List<Integer>> fourSum(int nums[], int target){
+		
+		for(int i=0;i<nums.length-3;i++){
+			
+		}
+	}
+}

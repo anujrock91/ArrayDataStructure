@@ -1,0 +1,8 @@
+package Snippet;
+
+public class ContainsDuplicates {
+	
+	public boolean isDuplicates(int [] nums){
+		
+	}
+}

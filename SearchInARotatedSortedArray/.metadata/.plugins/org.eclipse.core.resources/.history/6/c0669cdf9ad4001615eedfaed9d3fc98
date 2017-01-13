@@ -1,0 +1,16 @@
+package Snippet;
+
+public class SearchInRotatedArray {
+	
+	public int findMinRotatedArray(int nums[]){
+		int left = 0;
+		int right = (nums.length-1);
+		while(left < right){
+			int current = ((left+right)/2);
+			int middle = nums[current];
+			if(middle > nums[right]){ left = (current+1); }
+			else{ right = current; }
+		}
+		return left;
+	}
+}

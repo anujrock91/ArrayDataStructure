@@ -1,0 +1,15 @@
+package Snippet;
+
+public class SetMatrixZeroes {
+	
+	public void setMatrixZeroes(int [][] mat){
+		
+		//check for zeroes in first row
+		for(int row=1;row<mat[0].length;row++){
+			if(mat[row] == 0){
+				
+			}
+		}
+		
+	}
+}

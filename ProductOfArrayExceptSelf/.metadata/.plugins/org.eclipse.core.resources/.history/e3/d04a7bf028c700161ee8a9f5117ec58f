@@ -1,0 +1,9 @@
+package Snippet;
+
+public class ArrayProduct {
+	
+	public int [] getArrayProduct(int arr[]){
+		int result [] = new int[arr.length];
+		return result;
+	}
+}

@@ -1,0 +1,16 @@
+package Snippet;
+import java.util.List;
+import java.util.ArrayList;
+public class SummaryRange {
+
+	public List<String> summaryRange(int [] nums){
+		ArrayList<String> result = new ArrayList<>();
+	}
+	
+	public static void main(String[] args) {
+
+	}
+	
+	
+
+}

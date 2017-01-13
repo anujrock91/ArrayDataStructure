@@ -1,0 +1,15 @@
+package Snippet;
+
+public class WiggleSort {
+	
+	public void wiggleSort(int [] nums){
+		
+	}
+	
+	private void swapMax(int [] nums, int index, int numberOfElemets){
+		if(numberOfElements == 3){
+			
+		}
+	}
+	
+}

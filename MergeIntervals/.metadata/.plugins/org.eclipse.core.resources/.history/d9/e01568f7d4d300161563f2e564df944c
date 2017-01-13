@@ -1,0 +1,91 @@
+package Snippet;
+import java.util.*;
+
+class Interval{
+	int start;
+	int end;
+	Interval() { start = 0; end = 0; }
+	Interval(int s, int e) { start = s; end = e; }
+}
+
+public class MergeIntervals {
+	
+	public List<Interval> merge(List<Interval> intervals){
+		//modifying the intervals
+		for(int i=0;i<intervals.size()-1;i++){
+			if(intervals.get(i).end >= intervals.get(i+1).start){
+				intervals.get(i+1).start = intervals.get(i).start;
+				intervals.get(i+1).end = Math.max(intervals.get(i).end,intervals.get(i+1).end);
+			}
+		}
+		//making the intervals same for same limits
+		for(int i=intervals.size()-1; i>0;i--){
+			if(intervals.get(i-1).start == intervals.get(i).start){
+				intervals.get(i-1).start = intervals.get(i).start;
+				intervals.get(i-1).end = intervals.get(i).end;
+			}
+		}
+		int left = 0;
+		int right = 0;
+		//removing duplicates
+		while(left <= (intervals.size()-1) && right <= (intervals.size()-1) ){
+			if(intervals.get(left).start == intervals.get(right).start){
+				++right;
+			}
+			else{
+				++left;
+				intervals.get(left).start = intervals.get(right).start;
+				intervals.get(left).end = intervals.get(right).end;
+				++right;
+			}
+		}
+		//shortening the final intervals
+		for(int i=intervals.size()-1;i>left;i--){
+			intervals.remove(i);
+		}
+		return intervals;
+	}
+	
+	
+	public void quickSort(List<Interval>temp, int left, int right){
+		if(left == right){ }
+		else{
+			int partiitonIndex = partition(left, right, temp);
+			if(partiitonIndex-1 > left){
+				partition(left, );
+			}
+			if(partiitonIndex-1 < right){
+				
+			}
+		}
+	}
+	
+	public int partition(int left, int right, List<Interval> temp){
+		Interval pivot = temp.get(((left+right)/2));
+		while(left <= right){
+			while(left<=right && temp.get(left).start < pivot.start){ ++left; }
+			while(left<=right && temp.get(right).start >= pivot.start){ --right; }
+			if(left <= right){
+				int start = temp.get(left).start;
+				int end = temp.get(left).end;
+				temp.get(left).start = temp.get(right).start;
+				temp.get(left).end = temp.get(right).end;
+				temp.get(right).start = start;
+				temp.get(right).end = end;
+				++left;--right;
+			}
+		}
+		return left;
+	}
+	
+	
+	public static void main(String args[]){
+		ArrayList<Interval> al = new ArrayList<>();
+		al.add(new Interval(1,9));al.add(new Interval(2,4)); al.add(new Interval(4,7)); al.add(new Interval(6,8));
+		List<Interval> l = new MergeIntervals().merge(al);
+		for(Interval i: l){
+			System.out.println("["+ i.start+ ","+ i.end+"]");
+		}
+	}
+	
+}

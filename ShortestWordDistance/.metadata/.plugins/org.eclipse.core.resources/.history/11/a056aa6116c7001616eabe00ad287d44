@@ -1,0 +1,9 @@
+package Snippet;
+
+public class ShortestWordDistance {
+	
+	public int getDistance(String[] arr, String word1, String word2){
+		
+	}
+	
+}

@@ -1,0 +1,8 @@
+package Snippet;
+
+public class BuySellStock2 {
+	
+	public int maxProfit(int [] prices){
+		
+	}
+}

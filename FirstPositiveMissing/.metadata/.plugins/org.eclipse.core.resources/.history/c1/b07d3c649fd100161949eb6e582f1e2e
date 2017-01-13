@@ -1,0 +1,17 @@
+package Snippet;
+
+public class FirstMissingPositive {
+	
+	public int missingPositive(int nums[]){
+		
+	}
+	
+	public void partition(int nums[]){
+		int left = 0;
+		int right = (nums.length-1);
+		while(left<=right){
+			while(nums[left]>0){ ++left; }
+			
+		}
+	}
+}

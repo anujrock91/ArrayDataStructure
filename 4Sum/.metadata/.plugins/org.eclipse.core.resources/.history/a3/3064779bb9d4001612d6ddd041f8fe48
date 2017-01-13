@@ -1,0 +1,37 @@
+package Snippet;
+import java.util.*;
+
+public class FourSum {
+	
+	public List<List<Integer>> fourSum(int nums[], int target){
+		Arrays.sort(nums);
+		List<List<Integer>> result=  new ArrayList<>();
+		for(int i=0;i<nums.length-3;i++){
+			if(i!=0 && nums[i] == nums[i-1]){ continue; }
+			for(int j=i+1;j<nums.length-2;j++){
+				int a = nums[i];
+				int b = nums[j];
+				int left = j+1;
+				int right = (nums.length-1);
+				while(left < right){
+					int c = nums[left];
+					int d = nums[right];
+					int sum = (a+b+c+d);
+					if(sum == target){
+						ArrayList<Integer> newList = new ArrayList<>();
+						newList.add(a);newList.add(b);newList.add(c);newList.add(d);
+						result.add(newList);
+						++left;
+						--right;
+					}
+					else if(sum < target){
+						++left;
+					}
+					else{
+						--right;
+					}
+				}
+			}
+		}
+	}
+}

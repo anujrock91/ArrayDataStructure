@@ -1,0 +1,23 @@
+package Snippet;
+
+public class SetMatrixZeroes {
+	
+	public void setMatrixZeroes(int [][] mat){
+		
+		//check for zeroes in first row
+		boolean decision = false;
+		for(int row=1;row<mat[0].length;row++){
+			if(mat[0][row] == 0){
+				decision = true;
+			}
+		}
+		if(decision){
+			for(int row=1;row<mat[0].length;row++){
+				if(mat[0][row] == 0){
+					mat[0][row] == -1;
+				}
+			}
+		}
+		
+	}
+}

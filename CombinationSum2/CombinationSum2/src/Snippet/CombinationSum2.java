@@ -1,0 +1,55 @@
+package Snippet;
+import java.util.*;
+
+public class CombinationSum2 {
+	
+	
+	public List<ArrayList<Integer>> Combinations(int nums[], int target){
+		Arrays.sort(nums);
+		ArrayList<Integer> temp = new ArrayList<>();
+		ArrayList<ArrayList<Integer>> result = new ArrayList<>();
+		getCombinations(nums, target, 0, temp, result);
+		return result;
+	}
+	
+	
+	public void getCombinations(int []nums, int target, int j, ArrayList<Integer> temp, ArrayList<ArrayList<Integer>> result){
+		int currFirst = nums[j];
+		temp.add(currFirst);
+		if(target-currFirst == 0){
+			ArrayList<Integer> newList = new ArrayList<>(temp);
+			result.add(newList);
+		}
+		else if(target-currFirst >0){
+			getCombinations(nums, target-currFirst, j+1, temp, result);
+		}
+		temp.remove(temp.size()-1);
+		
+		for(int i=j+1;i<nums.length;i++){
+			if( nums[i] == nums[i-1]){ continue; }
+			int curr = nums[i];
+			temp.add(curr);
+			if(target-curr == 0){
+				ArrayList<Integer> newList = new ArrayList<>(temp);
+				result.add(newList);
+				temp.remove(temp.size()-1);
+			}
+			else if(target-curr >0){
+				getCombinations(nums, target-curr, i+1, temp, result);
+				temp.remove(temp.size()-1);
+			}
+			else{
+				temp.remove(temp.size()-1);
+				break;
+			}
+		}
+	}
+	
+	
+	public static void main(String args[]){
+		List<ArrayList<Integer>> result= new CombinationSum2().Combinations(new int[]{10, 1, 2, 7, 6, 1, 5}, 8);
+		for(ArrayList<Integer> r: result){
+			System.out.println(r);
+		}
+	}
+}

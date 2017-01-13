@@ -1,0 +1,8 @@
+package Snippet;
+
+public class MaxSubArray {
+	
+	public static int maxSubArr(int [] nums){
+		
+	}
+}

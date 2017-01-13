@@ -1,0 +1,19 @@
+package Snippet;
+
+public class Test {
+
+	public static void main(String[] args) {
+		RandomCollection obj = new RandomCollection();
+		obj.insert(1);
+		obj.insert(2);
+		obj.insert(3);
+		obj.insert(4);
+		obj.insert(4);
+		obj.insert(3);
+		obj.displayCollection();
+		obj.remove(4);
+		obj.displayCollection();
+		System.out.println(obj.getRandom());
+	}
+	
+}

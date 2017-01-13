@@ -1,0 +1,49 @@
+package Snippet;
+import java.util.*;
+
+public class SubSets {
+	
+	  public List<List<Integer>> subsetsWithDup(int[] nums) {
+		  ArrayList<Integer> temp = new ArrayList<>();
+		  ArrayList<List<Integer>> result = new ArrayList<>();
+		  ArrayList<Integer> tempNums = new ArrayList<>();
+	      for(Integer i: nums){ tempNums.add(i); }
+	      subSets(tempNums, temp, result);
+	      return result;
+	  }
+	  
+	  private void subSets(ArrayList<Integer> nums, ArrayList<Integer> temp, ArrayList<List<Integer>> result){
+		  if(nums.size() == 0){ return; }
+		  else{
+			  for(int i=0;i<nums.size();i++){
+				  temp.add(nums.remove(i));
+				  ArrayList<Integer> newList = new ArrayList<>(temp);
+				  result.add(newList);
+				  subSets(nums, temp, result);
+				  nums.add(i,temp.remove(temp.size()-1));
+			  }
+		  }
+	  }
+	  
+	  
+	  private void uniqueSets(List<List<Integer>> result, int [] nums){
+		  HashMap<String, List<Integer>> patternMap = new HashMap<String, List<Integer>>();
+		  int max = Integer.MIN_VALUE;
+		  for(int i: nums){
+			  max = Math.max(max, i);
+		  }
+		  for(List<Integer> l: result){
+			  int []tempArr = new int[max];
+			  for(Integer i : l){ tempArr[i] += 1;}
+			  String patt = "";
+			  for(Integer i : tempArr){ }
+		  }
+	  }
+	  
+	  public static void main(String args[]){
+		  List<List<Integer>> l = new SubSets().subsetsWithDup(new int[]{1,2,2});
+		  for(List<Integer> il: l){
+			  System.out.println(il);
+		  }
+	  }
+}	

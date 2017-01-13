@@ -1,0 +1,14 @@
+package Snippet;
+
+public class RemoveElement {
+	
+	public int removeElement(int []nums, int val){
+		
+	}
+	
+	public void partition(int [] nums, int left, int right, int pivot){
+		while(left <= right){
+			while(nums[])
+		}
+	}
+}

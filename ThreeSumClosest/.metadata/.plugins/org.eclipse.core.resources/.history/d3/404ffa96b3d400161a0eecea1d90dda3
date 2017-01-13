@@ -1,0 +1,11 @@
+package Snippet;
+
+public class ThreeSumClosest {
+	
+	public int getClosest(int nums[], int target){
+		for(int i=0;i<nums.length-2;i++){
+			int first = nums[i];
+		}
+	}
+	
+}

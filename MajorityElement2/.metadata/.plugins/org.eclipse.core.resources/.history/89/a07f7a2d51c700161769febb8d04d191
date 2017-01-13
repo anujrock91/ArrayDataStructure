@@ -1,0 +1,22 @@
+package Snippet;
+import java.util.List;
+
+public class MajorityElement {
+
+	public List<Integer> getMajorityElements(int nums[]){
+		for(int i=0;i<nums.length;i++){
+			if(count1 == 0){
+				result1 = nums[i];
+				count1 = 1;
+			}
+			
+		}
+	}
+	 
+	public static void main(String[] args) {
+		
+	}
+	
+	
+
+}

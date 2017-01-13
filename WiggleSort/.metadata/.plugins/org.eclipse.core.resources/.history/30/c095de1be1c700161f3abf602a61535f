@@ -1,0 +1,9 @@
+package Snippet;
+
+public class WiggleSort {
+	
+	public void wiggleSort(int [] nums){
+		
+	}
+	
+}

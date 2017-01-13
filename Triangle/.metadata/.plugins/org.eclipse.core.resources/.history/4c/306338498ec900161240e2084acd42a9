@@ -1,0 +1,19 @@
+package Snippet;
+import java.util.*;
+
+public class Triangle {
+	
+	 public int minimumTotal(List<List<Integer>> triangle) {
+		 
+	 }
+	 
+	 private int minimumTotal(List<List<Integer>> triangle, int level, int indexParent){
+		 if(level == triangle.size()-1){
+			 return Math.min(triangle.get(level).get(indexParent), triangle.get(level).get(IndexParent));
+		 }
+		 else{
+			 int leftChild = triangle.get(level).get(indexParent);
+			 int rightChild = triangle.get(level).get(indexParent);
+ 		 }
+	 }
+}

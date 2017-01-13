@@ -1,0 +1,11 @@
+package Snippet;
+
+public class NextPermutations {
+	
+	public void nextPerm(int nums[]){
+		int right = (nums.length-2);
+		while(right >= 0){
+			if(nums[right] >=  )
+		}
+	}
+}	

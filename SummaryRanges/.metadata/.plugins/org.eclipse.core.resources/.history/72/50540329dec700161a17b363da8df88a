@@ -1,0 +1,22 @@
+package Snippet;
+import java.util.List;
+import java.util.ArrayList;
+
+public class SummaryRange {
+
+	public List<String> summaryRange(int [] nums){
+		ArrayList<String> result = new ArrayList<>();
+		int prev = Integer.MIN_VALUE;
+		String res = "";
+		for(int i=0;i<nums.length;i++){
+			
+		}
+	}
+	
+	public static void main(String[] args) {
+
+	}
+	
+	
+
+}

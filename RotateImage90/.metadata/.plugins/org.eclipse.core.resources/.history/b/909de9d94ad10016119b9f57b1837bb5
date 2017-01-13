@@ -1,0 +1,25 @@
+package Snippet;
+
+public class RotateImage90 {
+	
+	public void rotate(int[][] matrix) {
+		int cols = matrix.length;
+		int rows = matrix.length;
+		int loop = (cols/2);
+		int index = 0;
+		int colIndex = 0;
+		
+		while(index < loop){
+			for(int i=colIndex; i<(cols-colIndex-1);i++){
+				int temp1 = matrix[index][i];
+				matrix[index][i] = matrix[rows-i-1][index];
+				int temp2 = matrix[i][cols-index-1];
+				matrix[i][cols-index-1] = temp1;
+				temp1 = matrix[rows-index-1][cols-i-1];
+				matrix[rows-index-1][cols-i-1] = 
+			}
+			++colIndex;
+			++index;
+		}
+    }
+}

@@ -1,0 +1,22 @@
+package Snippet;
+import java.util.HashMap;
+
+public class NearbyDuplicates {
+	
+	public boolean isNearbyDuplicates(int arr[] , int k){
+		if(k > (arr.length-1)){
+			return false;
+		}
+		else{
+			HashMap<Integer, Integer> elementIndex = new HashMap<>();
+			for(int i=0;i<arr.length;i++){
+				if(elementIndex.containsKey(arr[i])){
+					int prev = elementIndex.get(arr[i]);
+					if((prev-i+1) <= k){ return true; }
+				}
+				elementIndex.put(arr[i], i);
+			}
+			
+		}
+	}
+}

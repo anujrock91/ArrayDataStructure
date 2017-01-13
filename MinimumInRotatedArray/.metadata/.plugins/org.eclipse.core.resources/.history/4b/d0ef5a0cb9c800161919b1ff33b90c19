@@ -1,0 +1,10 @@
+package Snippet;
+
+public class MinRotatedSorted {
+	
+	public int getMin(int [] nums){
+		
+	}
+	
+	
+}

@@ -1,0 +1,64 @@
+package Snippet;
+
+public class WordSearch {
+	
+	public boolean exists(char[][]board, String word){
+		for(int row =0;row<board.length;row++){
+			for(int col=0;col<board[0].length;col++){
+				if(word.charAt(0) == board[row][col]){
+					
+				}
+			}
+		}
+	}
+	
+	public boolean DFS(String word, char [][] board, String direction, int row, int col, int charCount){
+		boolean dec = true;
+		if(row < 0 || row >= board.length){ return false; }
+		if(col < 0 || col >= board[0].length){ return false; }
+		if(charCount >= word.length()){ return true; }
+		else{
+			char c = word.charAt(charCount);
+			dec = c==board[row][col]?true:false;
+			if(!dec){ return dec; }
+			if(direction == null){
+				boolean dec1 = DFS(word, board, "west", row, col-1, charCount+1);
+				boolean dec2 = DFS(word, board, "north", row-1, col, charCount+1);
+				boolean dec3 = DFS(word, board, "east", row, col+1, charCount+1);
+				boolean dec4 = DFS(word, board, "south", row+1, col, charCount+1);
+				if(dec1||dec2||dec3||dec4){ return true; }
+				else{ return false; }
+			}
+			else{
+				if(direction.equals("north")){ //north -> comes from south because is previous recursion it called north
+					boolean dec1 = DFS(word, board, "west", row, col-1, charCount+1);
+					boolean dec2 = DFS(word, board, "north", row-1, col, charCount+1);
+					boolean dec3 = DFS(word, board, "east", row, col+1, charCount+1);
+					if(dec1||dec2||dec3){ return true; }
+					else{ return false; }
+				}
+				else if(direction.equals("east")){
+					boolean dec2 = DFS(word, board, "north", row-1, col, charCount+1);
+					boolean dec3 = DFS(word, board, "east", row, col+1, charCount+1);
+					boolean dec4 = DFS(word, board, "south", row+1, col, charCount+1);
+					if(dec2||dec3||dec4){ return true; }
+					else{ return false; }
+				}
+				else if(direction.equals("south")){
+					boolean dec1 = DFS(word, board, "west", row, col-1, charCount+1);
+					boolean dec3 = DFS(word, board, "east", row, col+1, charCount+1);
+					boolean dec4 = DFS(word, board, "south", row+1, col, charCount+1);
+					if(dec1||dec3||dec4){ return true; }
+					else{ return false; }
+				}
+				else{
+					boolean dec1 = DFS(word, board, "west", row, col-1, charCount+1);
+					boolean dec2 = DFS(word, board, "north", row-1, col, charCount+1);
+					boolean dec4 = DFS(word, board, "south", row+1, col, charCount+1);
+					if(dec1||dec2||dec4){ return true; }
+					else{ return false; }
+				}
+			}
+		}
+	}
+}

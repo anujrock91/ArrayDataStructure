@@ -1,0 +1,35 @@
+package Snippet;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+
+public class ShortestWordDistance2 {
+	private String words[];
+	private String word1;
+	private String word2;
+	private HashMap<String, ArrayList<Integer>> wordsIndex;
+	
+	public ShortestWordDistance2(String [] words, String word1, String word2){
+		this.words = words;
+		this.word1 = word1;
+		this.word2 = word2;
+		wordsIndex = new HashMap<>();
+		fillMap();
+	}
+	
+	private void fillMap(){
+		for(int i=0;i<words.length;i++){
+			if(wordsIndex.containsKey(words[i])){
+				wordsIndex.get(words[i]).add(i);
+			}
+			else{
+				wordsIndex.put(words[i], new ArrayList<Integer>());
+				wordsIndex.get(words[i]).add(i);
+			}
+		}
+	}
+	
+	
+	
+
+}

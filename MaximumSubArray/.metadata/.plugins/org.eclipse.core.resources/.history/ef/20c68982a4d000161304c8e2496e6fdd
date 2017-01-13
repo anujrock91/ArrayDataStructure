@@ -1,0 +1,10 @@
+package Snippet;
+
+public class MaxSubArray {
+	
+	public static int maxSubArr(int [] nums){
+		int sum = 0;
+		int max = Integer.MIN_VALUE;
+		
+	}
+}

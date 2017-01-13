@@ -1,0 +1,32 @@
+package Snippet;
+import java.util.*;
+
+public class MissingRange {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public List<String> missingRanges(int nums[]){
+		if(nums.length == 0){ 
+			ArrayList<String> newList = new ArrayList<String>();
+			newList.add("0->99");
+			return newList;
+		}
+		else if(nums.length == 1){
+			ArrayList<String> newList = new ArrayList<String>();
+			if(nums[0] != 99 || nums[0] != 0){
+				newList.add(0+"->"+(nums[0]-1));
+				newList.add((nums[0]+1)+"->"+99);
+			}
+			else if(nums[0] == 0){
+				newList.add(1+"->"+99);
+			}
+			else{
+				newList.add()
+			}
+		}
+	}
+
+}

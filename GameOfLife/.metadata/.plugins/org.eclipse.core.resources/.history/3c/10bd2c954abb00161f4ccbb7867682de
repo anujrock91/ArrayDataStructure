@@ -1,0 +1,11 @@
+package Snippet;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int mat[][] = new int[][];
+		GameOfLifeNextState.getNextState(mat);
+	}
+
+}

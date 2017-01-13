@@ -1,0 +1,27 @@
+package Snippet;
+
+public class NextPermutations {
+	
+	public void nextPerm(int nums[]){
+		int right = (nums.length-2);
+		while(right >= 0){
+			if(nums[right] >=  nums[right-1]){
+				--right;
+			}
+			else{
+				break;
+			}
+		}
+		if(right < 0){ return; }
+		else{
+			int left = right+1;
+			while(left < nums.length){
+				if(nums[left]>nums[right]){ ++left; }
+				else{ break; }
+			}
+			int temp = nums[right];
+			nums[right] = nums[left-1];
+			nums[left-1] = temp; 
+		}
+	}
+}	

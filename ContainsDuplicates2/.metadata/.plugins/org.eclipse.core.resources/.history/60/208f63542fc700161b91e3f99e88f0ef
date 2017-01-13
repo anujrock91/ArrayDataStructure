@@ -1,0 +1,13 @@
+package Snippet;
+
+public class NearbyDuplicates {
+	
+	public boolean isNearbyDuplicates(int arr[] , int k){
+		if(k > (arr.length-1)){
+			return false;
+		}
+		else{
+			
+		}
+	}
+}

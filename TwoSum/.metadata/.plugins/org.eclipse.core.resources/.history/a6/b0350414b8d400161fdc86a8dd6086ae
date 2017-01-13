@@ -1,0 +1,16 @@
+package Snippet;
+import java.util.*;
+
+public class TwoSum {
+	
+	public int[] twoSum(int nums[], int target){
+		int []result = new int[2];
+		HashMap<Integer, Integer> remIndex = new HashMap<>();
+		for(int i=0;i<nums.length;i++){
+			if(remIndex.containsKey(nums[i])){
+				result[0] = remIndex.get(nums[i]).intValue();
+				result[1] = remIndex.get()
+			}
+		}
+	}
+}

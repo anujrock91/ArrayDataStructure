@@ -1,0 +1,13 @@
+package Snippet;
+
+public class SummaryRange {
+
+	public List<String> summaryRange()
+	
+	public static void main(String[] args) {
+
+	}
+	
+	
+
+}

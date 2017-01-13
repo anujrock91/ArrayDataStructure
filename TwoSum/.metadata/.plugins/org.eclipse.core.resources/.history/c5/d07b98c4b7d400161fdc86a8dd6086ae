@@ -1,0 +1,10 @@
+package Snippet;
+import java.util.*;
+
+public class TwoSum {
+	
+	public int[] twoSum(int nums[]){
+		HashMap<Integer, Integer> remIndex = new HashMap<>();
+		
+	}
+}

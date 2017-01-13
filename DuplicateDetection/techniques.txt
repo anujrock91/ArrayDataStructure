@@ -1,0 +1,9 @@
+Situations for duplicate detections: Array of integers
+
+1. Method of negating:
+a. if the array has only +ve numbers
+b. if the array(size n) has numbers between 0 to n-1
+c. if you are allowed to modify the array
+
+2. 
+	 

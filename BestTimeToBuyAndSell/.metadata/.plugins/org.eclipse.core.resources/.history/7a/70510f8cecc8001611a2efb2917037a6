@@ -1,0 +1,8 @@
+package Snippet;
+
+public class BestTimeBuySell {
+	
+	public int maxProfit(int[] prices){
+		
+	}
+}

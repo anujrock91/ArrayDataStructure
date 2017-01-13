@@ -1,0 +1,25 @@
+package Snippet;
+import java.util.*;
+
+public class CombinationSum {
+	
+	public void getCombinations(int [] arr, int target, ArrayList<Integer> temp, ArrayList<ArrayList<Integer>> result){
+		for(int i = 0;i<arr.length;i++){
+			int current = arr[i];
+			if(target-current == 0){
+				temp.add(current);
+				ArrayList<Integer> newList = new ArrayList<Integer>(temp);
+				result.add(newList);
+				temp.remove(temp.size()-1);
+			}
+			else if(target-current > 0){
+				temp.add(current);
+				getCombinations(arr,target-current,temp,result);
+				temp.remove(temp.size()-1);
+			}
+			else{
+				break;
+			}
+		}
+	}
+}

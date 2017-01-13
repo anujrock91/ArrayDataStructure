@@ -1,0 +1,15 @@
+package Snippet;
+import java.util.*;
+
+public class MergeSorted {
+	
+	public int[] mergeSorted(int num1s[] , int m, int nums2[], int n){
+		int count1 = (m-1);
+		int count2 = (n-1);
+		
+		while(count1>=0 && count2>=0){
+			
+		}
+	}
+	
+}

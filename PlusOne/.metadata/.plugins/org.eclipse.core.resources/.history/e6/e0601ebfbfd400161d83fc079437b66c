@@ -1,0 +1,8 @@
+package Snippet;
+
+public class PlusOne {
+	
+	public int[] plusOne(int nums[]){
+		
+	}
+}

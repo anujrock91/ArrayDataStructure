@@ -1,0 +1,13 @@
+package Snippet;
+import java.util.*;
+
+public class PascalTriangle2 {
+	
+	public List<Integer> getKthRow(int rowNum,int level){
+		if(level == 1){ 
+			ArrayList<Integer> temp = new ArrayList<Integer>(); 
+			temp.add(1);
+			return temp; }
+		
+	}
+}

@@ -1,0 +1,6 @@
+package Snippet;
+
+public class JumpGame {
+	
+	public boolean canJump()
+}

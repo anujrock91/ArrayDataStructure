@@ -1,0 +1,36 @@
+package Snippet;
+import java.util.ArrayList;
+
+public class SpiralMatrix2 {
+	
+	public int[][] spiralMatrix(int n){
+		int[][] mat = new int[n][n];
+		int loop = (n/2);
+		int index = 0;
+		ArrayList<Integer> num = new ArrayList<>();
+		for(int i=1;i<=(n*n);i++){
+			num.add(i);
+		}
+		int rowIndex = 0;
+		int colIndex = 0;
+		//int withdraw = 0;
+		while(index < loop){
+			
+			//fill in the top row
+			for(int i=colIndex;i<n-colIndex-1;i++){
+				mat[rowIndex][i] = num.remove(0);
+			}
+			
+			//fill in the right column
+			for(int i=rowIndex;i<n-rowIndex-1;i++){
+				mat[i][n-colIndex-1] = num.remove(0); 
+			}
+			
+			//fill in the bottom row
+			for(int i=n-colIndex-1;i>colIndex;i--){
+				
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,54 @@
+package Snippet;
+import java.util.*;
+
+public class MaximumRectangle {
+	
+	
+	public int maxRectangleInMatrix(int [][] mat){
+		int [] arr = new int[mat[0].length];
+		int max = Integer.MIN_VALUE;
+		for(int row=0;row<mat.length;row++){
+			for(int i=0;i<mat[0].length;i++){
+				if(mat[row][i] == 0){
+					arr[i] = 0;
+				}
+				else{
+					arr[i] += mat[row][i];
+				}
+			}
+			max = Math.max(max, maxAreaRect(arr));
+			System.out.print(max + " | ");
+		}
+		System.out.println();
+		return max;
+	}
+	
+	
+	public int maxAreaRect(int nums[]){
+		Stack<Integer> s = new Stack<>();
+		int max = Integer.MIN_VALUE;
+		int i=0;
+		while(i<nums.length){
+			int area = 1;
+			if(s.isEmpty()){
+				s.push(i);
+				++i;
+			}
+			else{
+				if(nums[s.peek()] <= nums[i]){
+					s.push(i);
+				}
+				else{
+					int currIndex = s.pop();
+					area = nums[currIndex]*(i-currIndex);
+				}
+			}
+		}
+	}
+	
+	
+	public static void main(String args[]){
+		int mat[][] = new int[][]{{1,0,1,0,0},{1,0,1,1,1},{1,1,1,1,1},{1,0,0,1,0}};
+		System.out.println(new MaximumRectangle().maxRectangleInMatrix(mat));
+	}
+}

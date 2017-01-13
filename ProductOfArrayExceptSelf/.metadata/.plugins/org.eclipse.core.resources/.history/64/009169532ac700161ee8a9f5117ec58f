@@ -1,0 +1,28 @@
+package Snippet;
+
+public class ArrayProduct {
+	
+	public int [] getArrayProduct(int arr[]){
+		int result [] = new int[arr.length];
+		int pro = 1;
+		for(int i=(arr.length-2);i>=0;i--){
+			pro *=arr[i+1];
+			result[i] = pro;
+		}
+		result[result.length-1] = 1;
+		pro=1;
+		for(int i=1;i<arr.length;i++){
+			pro *= arr[i-1];
+			result[i] *=pro;
+		}
+		return result;
+	}
+	
+	public static void main(String [] args){
+		int [] res = new ArrayProduct().getArrayProduct(new int[]{1});
+		for(int i: res){
+			System.out.print(i + " | ");
+		}
+		System.out.println();
+	}
+}

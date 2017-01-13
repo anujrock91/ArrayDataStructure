@@ -1,0 +1,42 @@
+package Snippet;
+import java.util.*;
+
+public class CombinationSum2 {
+	
+	
+	public List<List<Integer>> Combinations(){
+		ArrayList<Integer> temp = new ArrayList<>();
+		List<ArrayList<Integer>> result = new  
+	}
+	
+	
+	public void getCombinations(int []nums, int target, int j, ArrayList<Integer> temp, ArrayList<ArrayList<Integer>> result){
+		int currFirst = nums[j];
+		temp.add(currFirst);
+		if(target-currFirst == 0){
+			ArrayList<Integer> newList = new ArrayList<>(temp);
+			result.add(newList);
+		}
+		else if(target-currFirst >0){
+			getCombinations(nums, target-currFirst, j+1, temp, result);
+		}
+		temp.remove(temp.size()-1);
+		
+		for(int i=j+1;i<nums.length;i++){
+			if( nums[i] == nums[i-1]){ continue; }
+			int curr = nums[i];
+			temp.add(curr);
+			if(target-curr == 0){
+				ArrayList<Integer> newList = new ArrayList<>(temp);
+				result.add(newList);
+			}
+			else if(target-curr >0){
+				getCombinations(nums, target-curr, i+1, temp, result);
+			}
+			else{
+				break;
+			}
+			temp.remove(temp.size()-1);
+		}
+	}
+}

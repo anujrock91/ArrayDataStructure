@@ -1,0 +1,34 @@
+package Snippet;
+
+public class MinPathSum {
+	
+	public int getMinPath(int [][] mat){
+		int [][] minPath = new int[mat.length][mat[0].length];
+		
+		int sum = 0;
+		for(int col=0;col<mat[0].length;col++){
+			sum += mat[0][col];
+			minPath[0][col] = sum;
+		}
+		sum = 0;
+		for(int row=0;row<mat.length;row++){
+			sum += mat[row][0];
+			minPath[row][0] = sum;
+		}
+		
+		for(int i=1;i<mat.length;i++){
+			for(int j=1;j<mat[0].length;j++){
+				minPath[i][j] = (mat[i][j] + Math.min(minPath[i][j-1], minPath[i-1][j]));
+			}
+		}
+		
+		return minPath[minPath.length-1][minPath[0].length-1];
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(new MinPathSum().getMinPath(new int[][]{{10,5,8,4},{5,3,4,2},{1,4,1,5}}));
+	}
+
+}

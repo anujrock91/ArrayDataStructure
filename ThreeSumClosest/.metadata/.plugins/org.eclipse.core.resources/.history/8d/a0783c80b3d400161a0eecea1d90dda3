@@ -1,0 +1,9 @@
+package Snippet;
+
+public class ThreeSumClosest {
+	
+	public int getClosest(int nums[], int target){
+		
+	}
+	
+}

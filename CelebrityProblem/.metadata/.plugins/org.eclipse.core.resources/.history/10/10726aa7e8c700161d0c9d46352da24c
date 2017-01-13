@@ -1,0 +1,9 @@
+package Snippet;
+
+public class CelebrityProblem {
+	
+	public int findCelebrity(int n){
+		
+	}
+	public void knows(int a, int b){}
+}

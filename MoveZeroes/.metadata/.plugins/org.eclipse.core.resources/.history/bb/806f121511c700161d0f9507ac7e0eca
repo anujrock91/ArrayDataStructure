@@ -1,0 +1,20 @@
+package Snippet;
+
+public class MoveZeroes {
+	
+	public int [] getNums(int arr[]){
+		int left = 0;
+		int right = 0;
+		while(left<arr.length && right<arr.length){
+			while(arr[left] != 0){ ++left; }
+			while(arr[right] == 0){ ++right; }
+			arr[left] = arr[right];
+			arr[right] = 0;
+		}
+		return arr;
+	}
+	
+	public static void main(String args[]){
+		
+	}
+}

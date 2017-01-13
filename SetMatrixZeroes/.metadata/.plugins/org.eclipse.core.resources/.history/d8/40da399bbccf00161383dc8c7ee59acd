@@ -1,0 +1,11 @@
+package Snippet;
+
+public class SetMatrixZeroes {
+	
+	public void setMatrixZeroes(int [][] mat){
+		
+		//check for zeroes in first row
+		
+		
+	}
+}

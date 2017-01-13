@@ -1,0 +1,11 @@
+package Snippet;
+
+public class Add1WithoutMath {
+	
+	public int add1(int num){
+		int one = 1;
+		while(one&num != 0){
+			
+		}
+	}
+}

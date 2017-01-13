@@ -1,0 +1,6 @@
+package Snippet;
+
+public class CelebrityProblem {
+	
+	public void knows(int a, int b){	}
+}

@@ -1,0 +1,23 @@
+package Snippet;
+
+public class RemoveDups2 {
+	
+	public int remove(int nums[]){
+		int left = 0;
+		int right = 0;
+		int count =0;
+		while(left < nums.length && right < nums.length){
+			if(nums[left] == nums[right] && count<2){
+				++count;
+				++left;
+				++right;
+			}
+			else if(nums[left] == nums[right] && count>=2){
+				++right;
+			}
+			else{
+				count = 0;
+			}
+		}
+	}
+}

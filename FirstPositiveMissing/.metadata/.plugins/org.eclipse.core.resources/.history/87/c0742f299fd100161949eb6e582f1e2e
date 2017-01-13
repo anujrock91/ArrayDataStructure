@@ -1,0 +1,13 @@
+package Snippet;
+
+public class FirstMissingPositive {
+	
+	public int missingPositive(int nums[]){
+		
+	}
+	
+	public void partition(int nums[]){
+		
+		
+	}
+}

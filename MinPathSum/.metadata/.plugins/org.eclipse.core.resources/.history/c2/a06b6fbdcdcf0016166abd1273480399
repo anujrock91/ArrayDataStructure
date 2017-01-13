@@ -1,0 +1,13 @@
+package Snippet;
+
+public class MinPathSum {
+	
+	public int getMinPath()
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
