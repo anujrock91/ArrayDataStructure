@@ -4,34 +4,31 @@ public class SortColors {
 	
 	
 	public void SortColors(int nums[]){
-		for(int i: nums){
-			System.out.print(i+"|");
+		int low = 0;
+		int mid = 0;
+		int high = nums.length-1;
+		while(mid<=high){
+			if(nums[mid] == 0){ 
+				int temp = nums[low];
+				nums[low] = nums[mid];
+				nums[mid] = temp;++low;++mid;
+			}
+			else if(nums[mid] == 1){
+				++mid;
+			}
+			else{
+				int temp = nums[mid];
+				nums[mid] = nums[high];
+				nums[high] = temp;
+				--high;
+			}
 		}
-		System.out.println();
-		int index = 0;
-		for(int i=0;i<=1;i++){
-			index = partition(nums,index, nums.length-1,i);
-		}
-		for(int i: nums){
-			System.out.print(i+"|");
-		}
+		
+		for(int i: nums){ System.out.print( i + " | ");} 
 		System.out.println();
 	}
 	
-	public int partition(int nums[], int left, int right, int pivot){
-		while(left<=right){
-			while(nums[left] == pivot){ ++left; }
-			while(nums[right] != pivot){ --right; }
-			if(left<=right){
-				int temp = nums[left];
-				nums[left] = nums[right];
-				nums[right] = temp;
-				++left;
-				--right;
-			}
-		}
-		return left;
-	}
+	
 	
 	public static void main(String args[]){
 		new SortColors().SortColors(new int[]{1,2,0,0,2,1,0,1,2,2,1,0,1,0,0});
